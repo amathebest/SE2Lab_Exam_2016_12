@@ -272,3 +272,11 @@ app.listen(app.get('port'), function() {
 });
 
 //AGGIUNGERE QUI SOTTO NUOVE FUNZIONI
+
+/**
+ * @brief searches students by the criteria inserted
+ * @return list of students that match the criteria of the search
+ */
+app.post('/searchByMark', function(request, response) {
+    
+}

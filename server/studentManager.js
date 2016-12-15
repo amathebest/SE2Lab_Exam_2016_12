@@ -98,7 +98,7 @@ var deleteStudentID = function deleteStudentID(ID)
 /**
  * @brief This function delete for a student, given his ID
  * @param StringID
- * @return treu if the student is deleted, false if the studet does not exist
+ * @return true if the student is deleted, false if the student does not exist
  */
 var deleteStudentSSN = function deleteStudentSSN(SSN)
 {
@@ -134,6 +134,21 @@ var insertStudent = function insertStudent(student)
 }
 
 //AGGIUNGERE QUI SOTTO NUOVE FUNZIONI
+var searchByMark = function searchByMark (myInput) {
+    var returnList = [];
+    for (int i = 0; i < studentList.size(); i++) {
+        if (myInput[0] == '<') {
+            if (studentList[i].mark < myInput[1].parseInt()) {
+                returnList.push(studentList[i].mark);
+            }
+        } else if (myInput[0] == '>') {
+            if (studentList[i].mark > myInput[1].parseInt()) {
+                returnList.push(studentList[i].mark);
+            }
+        }
+    }
+    return returnList;
+}
 
 
 
